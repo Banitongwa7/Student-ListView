@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TD4_ListView</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="saissisez_votre_login">Saissisez votre login</string>
+    <string name="connexion">Connexion</string>
+    <string name="s_inscrire">S\'inscrire</string>
+    <string name="saissisez_votre_mot_de_passe">Saissisez votre mot de passe</string>
+</resources>
