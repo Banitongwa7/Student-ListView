@@ -8,9 +8,7 @@ import android.os.Bundle;
 import java.util.List;
 
 public class DisplayEtudiants extends AppCompatActivity {
-
     private Button delete;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

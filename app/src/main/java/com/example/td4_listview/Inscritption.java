@@ -37,7 +37,7 @@ public class Inscritption extends AppCompatActivity {
                 }else {
                     if (password.getText().toString().equals(confirm.getText().toString())) {
                         EtudiantDAO dao = new EtudiantDAO(Inscritption.this);
-                        Etudiant e = new Etudiant(0, nom.getText().toString(), prenom.getText().toString(), email.getText().toString(), password.getText().toString());
+                        Etudiant e = new Etudiant(nom.getText().toString(), prenom.getText().toString(), email.getText().toString(), password.getText().toString());
                         dao.insertEtudiant(e);
                         Toast.makeText(Inscritption.this, "Nouvel utilisateur ajouté !", Toast.LENGTH_SHORT).show();
                     } else {

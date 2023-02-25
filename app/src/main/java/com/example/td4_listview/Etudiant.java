@@ -10,8 +10,7 @@ public class Etudiant implements Serializable {
     public Etudiant(){
 
     }
-    public Etudiant(int matricule, String nom, String prenom, String email, String password) {
-        this.matricule = matricule;
+    public Etudiant(String nom, String prenom, String email, String password) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;

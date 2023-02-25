@@ -1,5 +1,4 @@
 package com.example.td4_listview;
-
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,16 +7,12 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class EtudiantDAO {
     private SQLiteDatabase db;
     private DataBaseHandler dbHandler;
-
-
     public EtudiantDAO(Context c) {
         this.dbHandler = new DataBaseHandler(c);
     }
-
     public long insertEtudiant(Etudiant etudiant) {
         db = dbHandler.getWritableDatabase();
         ContentValues cont = new ContentValues();
@@ -29,16 +24,12 @@ public class EtudiantDAO {
         db.close();
         return res;
     }
-
-
-
     public int deleteEtudiant(Etudiant etudiant) {
         db = dbHandler.getWritableDatabase();
         int res = db.delete("etudiant", "matricule=" + etudiant.getMatricule(), null);
         db.close();
         return res;
     }
-
     public List<Etudiant> getAll() {
         db = dbHandler.getReadableDatabase();
         Cursor c = db.query("etudiant", null, null, null, null, null, null);
@@ -53,7 +44,6 @@ public class EtudiantDAO {
         db.close();
         return list;
     }
-
     @SuppressLint("Range")
     public Etudiant getEtudiantWithLogin(String email, String password) {
         db = dbHandler.getReadableDatabase();
@@ -67,7 +57,6 @@ public class EtudiantDAO {
         db.close();
         return etudiant;
     }
-
     @SuppressLint("Range")
     private void setEtudiantData(Cursor c, Etudiant e) {
         e.setMatricule(c.getInt(c.getColumnIndex("matricule")));
@@ -76,5 +65,4 @@ public class EtudiantDAO {
         e.setEmail(c.getString(c.getColumnIndex("email")));
         e.setPassword(c.getString(c.getColumnIndex("password")));
     }
-
 }

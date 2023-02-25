@@ -9,20 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
-
     private EditText login;
     private EditText password;
     private Button connexion;
     private Button inscription;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         connexion = (Button) findViewById(R.id.connexion);
         inscription = (Button) findViewById(R.id.inscription);
-
         connexion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
         inscription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
